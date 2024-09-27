@@ -4,9 +4,9 @@ tasks:
     init: |
       mkdir -p .vscode
       echo '{"python.pythonPath": "/opt/conda/bin/python"}' > .vscode/settings.json
-      eval "$(sudo /opt/conda/bin/python -m conda init)"
+      conda init
     command: |
-      eval "$(sudo /opt/conda/bin/python -m conda init)"
+      conda init
 
 vscode:
   extensions:
