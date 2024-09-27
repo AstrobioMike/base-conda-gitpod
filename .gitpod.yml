@@ -4,7 +4,7 @@ tasks:
     init: |
       mkdir -p .vscode
       echo '{"python.pythonPath": "/opt/conda/bin/python"}' > .vscode/settings.json
-    begin: |
+    command: |
       conda init && source ~/.bashrc
 
 vscode:
