@@ -4,12 +4,11 @@ tasks:
     init: |
       mkdir -p .vscode
       echo '{"python.pythonPath": "/opt/conda/bin/python"}' > .vscode/settings.json
-      conda init
-    command: |
-      source ~/.bashrc
+      conda init && source ~/.bashrc
 
 vscode:
   extensions:
+    - ms-python.debugpy
     - eamodio.gitlens
     - ms-python.python
     - ms-python.vscode-pylance
