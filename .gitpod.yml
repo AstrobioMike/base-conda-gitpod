@@ -1,10 +1,11 @@
-image: ghcr.io/conda/conda-ci:main-linux-python3.9
+image: continuumio/miniconda3
+# image: ghcr.io/conda/conda-ci:main-linux-python3.9
 tasks:
   - name: initialize
     init: |
       mkdir -p .vscode
       echo '{"python.pythonPath": "/opt/conda/bin/python"}' > .vscode/settings.json
-      conda init && source ~/.bashrc
+      # conda init && source ~/.bashrc
     begin: |
       conda init && source ~/.bashrc
 
